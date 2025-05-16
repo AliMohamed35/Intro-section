@@ -23,7 +23,7 @@ header .logo {
     display: flex;
     align-items: center;
 
-    h2 {
+    h1 {
         margin-right: 2rem;
     }
 }
@@ -49,10 +49,17 @@ header .logo {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+}
 
-    button {
-        cursor: pointer;
-    }
+.nav-btns button {
+    cursor: pointer;
+}
+
+.nav-btns #menu {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: none;
 }
 
 #login {
@@ -65,4 +72,84 @@ header .logo {
     border-radius: 15px;
     border: 1px solid var(--MediumGray);
     padding: 15px;
+}
+
+section .hero {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: calc(100vh - 86px);
+    overflow: hidden;
+    display: flex;
+    padding: 0 40px;
+}
+
+.left {
+    padding: 5rem 0;
+    flex: 1;
+}
+
+.left h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 5rem 0 3rem 0;
+    line-height: 1.1;
+    color: var(--AlmostBlack);
+}
+
+.left p {
+    line-height: 1.7rem;
+    margin-bottom: 3rem;
+    color: var(--MediumGray);
+    font-size: 1.125rem;
+    max-width: 540px;
+}
+
+.left button {
+    padding: 16px 32px;
+    background-color: var(--AlmostBlack);
+    color: var(--AlmostWhite);
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.left button:hover {
+    background-color: var(--AlmostWhite);
+    color: var(--AlmostBlack);
+    border: 2px solid var(--AlmostBlack);
+}
+
+.left .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: 0;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .showOnMobile {
+        display: flex !important;
+    }
 }
