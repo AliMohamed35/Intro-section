@@ -74,6 +74,43 @@ header .logo {
     padding: 15px;
 }
 
+.sideBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    z-index: 999;
+    height: 100vh;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--MediumGray);
+    background-color: white;
+
+    li {
+        align-items: center;
+        gap: 5px;
+    }
+
+
+    li a {
+        color: var(--MediumGray);
+        text-decoration: none;
+    }
+
+    .nav-btns {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/************Section************/
 section .hero {
     max-width: 1440px;
     margin: 0 auto;
@@ -146,10 +183,21 @@ section .hero {
 
 @media(max-width: 800px) {
     .hideOnMobile {
-        display: none;
+        display: none !important;
     }
 
     .showOnMobile {
         display: flex !important;
+    }
+
+    .nav-btns #login,
+    #register {
+        border: 1px solid var(--MediumGray);
+        padding: 15px;
+        width: 100%;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
